@@ -2,7 +2,9 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" },
+        "src": "./api/*.js",
+        "use": "@vercel/node"
     },
     "routes": [{
         "src": "/(.*)",
@@ -24,14 +26,5 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    },
-    "builds": [
-        {
-          "src": "./public",
-          "use": "@vercel/static-build",
-          "config": {
-            "build.command": "sudo vite build"
-          }
-        }
-    ]
+    }
 }
