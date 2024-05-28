@@ -1,0 +1,52 @@
+1. Install laravel
+-composer create-project --prefer-dist laravel/laravel example-app "10.*"
+
+2. Package starter kit laravel (laravel breeze)
+-composer require laravel/breeze --dev
+-run server & add db
+-edit .env
+
+BREEZE
+3. Install breeze
+-php artisan breeze:install
+-npm install
+-npm run dev
+
+
+LANDING PAGE
+4. Add template
+-folder root/template
+
+5. Add index & asset public
+-folder root/resource/views/frontend/index.blade.php
+-route welcome to root/resource/views/frontend/index.blade.php
+-copy asset template to root/public/frontend
+-sesuaikan pemanggilan css dan js :
+css/normalize.css menjadi {{ asset('frontend/css/normalize.css') }}
+{{ asset(' artinya root/
+-sesuaikan bg asseet style:
+style="background-image:url('img/slider3.jpg')"
+menjadi
+style="background-image:url('frontend/img/slider3.jpg')"
+
+
+
+ADMINLTE
+6. Add template
+-folder root/template
+
+7. jika file berupa ts maka perlu compile dulu
+-npm install
+-npm run dev
+-npm run production
+Jika sudah ada asset/file html langsung ke tahap 8
+
+8. Add index & asset public
+-copy asset(folder asset dan asset) template to root/public/backend
+
+8. Add dashboard file
+-root/resource/views/dashboard/index.blade.php
+-route dashboard to root/resource/views/dashboard/index.blade.php
+-lakukan @extends, @section, @yield, @include dan parsing data yang diperlukan dan sesuaikan kebutuhan
+
+
