@@ -27,7 +27,6 @@
     },
     "builds": [
         {
-          "src": "./public",
           "use": "@vercel/static-build",
           "config": {
             "build.command": "sudo vite build"
