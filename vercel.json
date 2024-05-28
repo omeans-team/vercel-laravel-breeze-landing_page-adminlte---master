@@ -24,13 +24,5 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    },
-    "builds": [
-        {
-          "use": "@vercel/static-build",
-          "config": {
-            "build.command": "sudo vite build"
-          }
-        }
-    ]
+    }
 }
