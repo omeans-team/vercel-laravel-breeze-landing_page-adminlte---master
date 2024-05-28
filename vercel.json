@@ -1,6 +1,6 @@
 {
     "version": 2,
-      "framework": null,
+    "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
@@ -24,5 +24,14 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    }
+    },
+    "builds": [
+        {
+          "src": "./public",
+          "use": "@vercel/static-build",
+          "config": {
+            "build.command": "sudo vite build"
+          }
+        }
+    ]
 }
